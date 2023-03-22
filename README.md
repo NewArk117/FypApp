@@ -56,16 +56,19 @@ directories used are for Taskins system
 
 **Run new instance of Streamlit container**
 docker run -p 8501:8501 fypapp-visualizeapp
+
+Open new terminal to enter next few code blocks
+
 **Copy from HDFS to local storage**
 docker cp (namenode container id):tmp\weather.csv C:\Users\taskin.intern\"OneDrive - Razer (Asia-Pacific) Pte. Ltd"\Desktop\weather.csv
 **Copy from local storage to streamlit container**
-docker cp C:\Users\taskin.intern\"OneDrive - Razer (Asia-Pacific) Pte. Ltd"\Desktop\weather.csv (visualizer Container ID):/weather.csv
+docker cp C:\Users\taskin.intern\"OneDrive - Razer (Asia-Pacific) Pte. Ltd"\Desktop\weather.csv (visualizer Container ID):/app/weather.csv
 
 **Some useful commands**
 docker ps --format "{{.Names}}"
 C:\Users\taskin.intern\"OneDrive - Razer (Asia-Pacific) Pte. Ltd"\Desktop\tmp
 C:\"Program Files (x86)"\FypApp\FypApp\DataStorage\data
-
+C:\"Program Files (x86)"\FypApp2\FypApp\FypApp\DataStorage\data\weather.csv
 
 **Option to use volumes**
 *Copy from hdfs to streamlit via shared volume*

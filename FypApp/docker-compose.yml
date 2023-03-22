@@ -63,6 +63,7 @@ services:
     build: ./spark
   
   visualizeapp:
+    container_name: stapp
     build:
       dockerfile: ./Dockerfile
       context: ./Visualization
